@@ -1,0 +1,6 @@
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+cipher = Fernet(key)
+msg = b"secret data"
+encrypted = cipher.encrypt(msg)
+decrypted = cipher.decrypt(encrypted)
